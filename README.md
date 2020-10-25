@@ -24,3 +24,14 @@ The following images show the statistical summaries of the complete and grouped 
 Given the fact that the variance is not allowed to exceed 100 PSI, we can conclude that:
 1. The total variance is under the limit, the current manufacturing data meet this design specification.
 2. When deepdiving into the manufacturing lots, Lot 2 does not meet this design specification and is pushing the general variance towards the defined limit.
+
+## T-Tests on Suspension Coils
+* For the complete dataset T-Test, a sample of 50 observations will be compared to the total mean. In this experiment, the following results are obtained:
+![](images/t_test_total.png)                                                                                                       
+With a p-value of 0.62, we cannot reject the null hypothesis and we have to say that the PSI across all manufacturing lots is not statistically different from the population mean of 1,500 pounds per square inch.
+* When analysing each manufacturing lot by itself with a sample of 50 observations per lot, the following results are obtained:
+
+|Lot 1                 |Lot2                   |Lot3                   |
+:---------------------:|:---------------------:|:----------------------:
+![](images/t_test_lot1.png)|![](images/t_test_lot2.png)|![](images/t_test_lot3.png)
+From the p-values, we can conclude that only Lot 1 is statistically different from the population mean of 1500.

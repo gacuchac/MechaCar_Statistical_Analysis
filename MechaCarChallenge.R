@@ -9,4 +9,7 @@ mecha_lm2 <- lm(mpg ~ vehicle_length + ground_clearance ,data=mecha) #generate m
 summary(mecha_lm2) #generate summary statistics
 
 suspension <- read.csv("data/Suspension_Coil.csv")
-total_summary <- suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups = 'keep') #create summary table with multiple columns
+total_summary <- suspension %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups = 'keep') #create summary table with multiple columns
+lot_summary <- suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups = 'keep') #create summary table with multiple columns
+
+t.test(suspension$PSI,mu=mean(suspension$PSI)) #compare sample versus population means
