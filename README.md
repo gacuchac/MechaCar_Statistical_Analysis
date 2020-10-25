@@ -6,6 +6,7 @@ In this project, we will review the production data for insights that may help t
 ## Linear Regression to Predict MPG
 Using all the variables given in the dataset, a linear model is created to predict the outcome of the mileage per gallon.
 ![](images/lm_summary.png)
+
 With this model we get a Multiple R-squared of 0.7149 with a p-value of 5.35e-11. This means that the model explains the 71.49% of the variance with very low chance ofit beingdueto randomness.
 
 * When analysing the Pr(>|t|), we can see that the most significant variables to predict the MPG, are:
