@@ -13,7 +13,7 @@ With this model we get a Multiple R-squared of 0.7149 and a p-value of 5.35e-11.
     1. vehicle_length, 
     2. ground_clearance
     The rest are not very significant but the still enrich the model.
-* The slope is given by wheather we reject the null hypothesis and the estimates for each variable. Since the p-value is under 0.05, we reject the null hypothesis so the slope is indeed not 0.
+* The slope is given by whether we reject the null hypothesis and the estimates for each variable. Since the p-value is under 0.05, we reject the null hypothesis so the slope is indeed not 0.
 * This model is not very good, since it explains approximately only 71.5% of the variance.
 
 ## Summary Statistics on Suspension Coils
@@ -31,7 +31,19 @@ Given the fact that the variance is not allowed to exceed 100 PSI, we can conclu
 With a p-value of 0.62, we cannot reject the null hypothesis and we have to say that the PSI across all manufacturing lots is not statistically different from the population mean of 1,500 pounds per square inch.
 * When analysing each manufacturing lot by itself with a sample of 50 observations per lot, the following results are obtained:
 
-|Lot 1                 |Lot2                   |Lot3                   |
-:---------------------:|:---------------------:|:----------------------:
-![](images/t_test_lot1.png)|![](images/t_test_lot2.png)|![](images/t_test_lot3.png)
-From the p-values, we can conclude that only Lot 1 is statistically different from the population mean of 1500.
+    |Lot 1                 |Lot2                   |Lot3                   |
+    :---------------------:|:---------------------:|:----------------------:
+    ![](images/t_test_lot1.png)|![](images/t_test_lot2.png)|![](images/t_test_lot3.png)
+    From the p-values, we can conclude that only Lot 1 is statistically different from the population mean of 1500.
+
+## Study Design: MechaCar vs Competition
+As a study design of MechaCar vs Competition, a maintenance cost using multiple two sided two sample t-Tests is proposed.
+1. The maintenance cost mean will be tested for every car manufacturer.
+2. The null hypothesisis that all maintenance cost means, regardless of the manufacturer are the same.
+3. Every manufacturer maintenance cost is compared to MechaCar's maintenance cost using the two sample t-Test, since this test allows an easy way to compare whether the competitor's maintenance cost distributes like MechaCar.
+4. The data necessary for this experiment would be two columns, one with the manufacturer's name or code, and another with the observed maintenance cost. The maintenance cost should: 
+    * Be numerical and continuos.
+    * The sample data was selected randomly from its population data.
+    * The input data is considered to be normally distributed.
+    * The sample size is reasonably large. Generally speaking, this means that the sample data distribution should be similar to its population data distribution.
+    * The variance of the input data should be very similar.
