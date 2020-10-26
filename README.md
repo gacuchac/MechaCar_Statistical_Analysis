@@ -34,7 +34,7 @@ With a p-value of 0.62, we cannot reject the null hypothesis and we have to say 
     |Lot 1                 |Lot2                   |Lot3                   |
     :---------------------:|:---------------------:|:----------------------:
     ![](images/t_test_lot1.png)|![](images/t_test_lot2.png)|![](images/t_test_lot3.png)
-    From the p-values, we can conclude that only Lot 1 is statistically different from the population mean of 1500.
+From the p-values, we can conclude that only Lot 1 is statistically different from the population mean of 1500.
 
 ## Study Design: MechaCar vs Competition
 As a study design of MechaCar vs Competition, a maintenance cost using multiple two sided two sample t-Tests is proposed.
